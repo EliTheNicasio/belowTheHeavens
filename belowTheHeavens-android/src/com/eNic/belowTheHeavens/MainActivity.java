@@ -12,6 +12,6 @@ public class MainActivity extends AndroidApplication {
         
         AndroidApplicationConfiguration cfg = new AndroidApplicationConfiguration();
         
-        initialize(new belowTheHeavensGame(), cfg);
+        initialize(new BTHGame(), cfg);
     }
 }

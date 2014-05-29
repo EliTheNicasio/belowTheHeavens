@@ -8,14 +8,13 @@ public class GameWorld {
     private Rectangle ground;
     private int score = 0;
     private float runTime = 0;
-    private int midPointX, midPointY;
+    private int midPointY;
     private GameRenderer renderer;
     
     //GameStates go here
     
-    public GameWorld(int midPointX, int midPointY) {
+    public GameWorld(int midPointY) {
 	//currentState = GameState.MENU
-	this.midPointX = midPointX;
 	this.midPointY = midPointY;
 	//projectile = new Projectile
 	//scroller = new ScrollHandler
@@ -47,5 +46,26 @@ public class GameWorld {
 	if(delta > .15f) {
 	    delta = .15f;
 	}
+    }
+    
+    
+    //Getters
+    
+    public int getMidPointY() {
+	return midPointY;
+    }
+    
+    public int getScore() {
+	return score;
+    }
+    
+    public void addScore(int increment) {
+	score+= increment;
+    }
+    
+    //GameStates e.g.- isReady
+    
+    public void setRenderer(GameRenderer renderer) {
+	this.renderer = renderer;
     }
 }

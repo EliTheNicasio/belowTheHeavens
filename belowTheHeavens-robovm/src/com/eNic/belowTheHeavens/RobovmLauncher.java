@@ -12,7 +12,7 @@ public class RobovmLauncher extends IOSApplication.Delegate {
 		IOSApplicationConfiguration config = new IOSApplicationConfiguration();
 		config.orientationLandscape = true;
 		config.orientationPortrait = false;
-		return new IOSApplication(new belowTheHeavensGame(), config);
+		return new IOSApplication(new BTHGame(), config);
 	}
 
 	public static void main(String[] argv) {

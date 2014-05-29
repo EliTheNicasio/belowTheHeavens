@@ -10,6 +10,6 @@ public class Main {
 	cfg.width = 480;
 	cfg.height = 320;
 		
-	new LwjglApplication(new belowTheHeavensGame(), cfg);
+	new LwjglApplication(new BTHGame(), cfg);
 	}
 }
