@@ -1,8 +1,8 @@
 package com.eNic.belowTheHeavens;
 
 import com.badlogic.gdx.Game;
-import com.enic.Helpers.AssetLoader;
-import com.enic.Screens.SplashScreen;
+import com.eNic.Helpers.AssetLoader;
+import com.eNic.Screens.SplashScreen;
 
 public class BTHGame extends Game {
 

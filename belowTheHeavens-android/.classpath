@@ -9,4 +9,5 @@
     <classpathentry kind="output" path="bin/classes"/>
     <classpathentry exported="true" kind="lib" path="libs/gdx-backend-android.jar" sourcepath="libs/gdx-backend-android-sources.jar"/>
     <classpathentry exported="true" kind="lib" path="/belowTheHeavens/libs/gdx.jar" sourcepath="/belowTheHeavens/libs/gdx-sources.jar"/>
+    <classpathentry exported="true" kind="lib" path="/belowTheHeavens/libs/tween-engine-api.jar" sourcepath="/belowTheHeavens/libs/tween-engine-api-sources.jar"/>
 </classpath>

@@ -2,6 +2,7 @@
 <module>
     <entry-point class="com.eNic.belowTheHeavens.client.GwtLauncher"/>
     <set-configuration-property name="gdx.assetpath" value="../belowTheHeavens-android/assets"/>
+    <inherits name="aurelienribon.tweenengine"/>
     <inherits name="belowTheHeavensGame"/>
     <inherits name="com.badlogic.gdx.backends.gdx_backends_gwt"/>
 </module>

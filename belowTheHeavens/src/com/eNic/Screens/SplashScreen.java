@@ -8,21 +8,21 @@ import aurelienribon.tweenengine.TweenManager;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.graphics.GL10;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.enic.Helpers.AssetLoader;
-import com.enic.Ship.FSGame;
-import com.enic.TweenAccessors.SpriteAccessor;
+import com.eNic.Helpers.AssetLoader;
+import com.eNic.TweenAccessors.SpriteAccessor;
+import com.eNic.belowTheHeavens.BTHGame;
 
 public class SplashScreen implements Screen {
 
 	private TweenManager manager;
 	private SpriteBatch batcher;
 	private Sprite sprite;
-	private FSGame game;
+	private BTHGame game;
 
-	public SplashScreen(FSGame game) {
+	public SplashScreen(BTHGame game) {
 		this.game = game;
 	}
 
@@ -64,7 +64,7 @@ public class SplashScreen implements Screen {
 	public void render(float delta) {
 		manager.update(delta);
 		Gdx.gl.glClearColor(1, 1, 1, 1);
-		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
+		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batcher.begin();
 		sprite.draw(batcher);
 		batcher.end();

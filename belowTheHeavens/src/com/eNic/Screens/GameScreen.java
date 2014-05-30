@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.eNic.GameWorld.GameRenderer;
 import com.eNic.GameWorld.GameWorld;
+import com.eNic.Helpers.InputHandler;
 
 public class GameScreen implements Screen {
 

@@ -1,9 +1,11 @@
 package com.eNic.GameWorld;
 
 import com.badlogic.gdx.math.Rectangle;
+import com.eNic.GameObjects.Blu;
 
 public class GameWorld {
-    //private Projectile projectile;
+    
+    private Blu blu;
     //private ScrollHandler scroller;
     private Rectangle ground;
     private int score = 0;
@@ -16,7 +18,7 @@ public class GameWorld {
     public GameWorld(int midPointY) {
 	//currentState = GameState.MENU
 	this.midPointY = midPointY;
-	//projectile = new Projectile
+	blu = new Blu(0, 1136, 96, 192, midPointY, 480);
 	//scroller = new ScrollHandler
     }
     
@@ -46,10 +48,15 @@ public class GameWorld {
 	if(delta > .15f) {
 	    delta = .15f;
 	}
+	blu.update(delta);
     }
     
     
     //Getters
+    
+    public Blu getBlu() {
+	return blu;
+    }
     
     public int getMidPointY() {
 	return midPointY;

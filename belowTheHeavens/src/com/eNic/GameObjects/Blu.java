@@ -13,9 +13,9 @@ public class Blu {
     private int midPointY;
     private int screenWidth;
 
-    private boolean isAlive;
+    private boolean isAlive, facingRight;
 
-    private Rectangle boundingRec;
+    private Rectangle hitBox;
     
     public Blu(float x, float y, int width, int height, int midPointY,
 	    int screenWidth) {
@@ -26,13 +26,16 @@ public class Blu {
 	position = new Vector2(x, y);
 	velocity = new Vector2(136, 0);
 	acceleration = new Vector2(0, 0); //not sure if necessary
-	boundingRec = new Rectangle();
+	hitBox = new Rectangle();
 	isAlive = true;
+	facingRight = true;
     }
     
     public void update(float delta) {
 	
 	//velocity.add(acceleration.cpy().scl(delta));
+	
+	facingRight = velocity.x > 0;
 	
 	if(position.x < 0) {
 	    position.x = 0;
@@ -60,4 +63,31 @@ public class Blu {
 	isAlive = false;
     }
     
+    public float getX() {
+	return position.x;
+    }
+    
+    public float getY()	{
+	return position.y;
+    }
+    
+    public float getWidth() {
+	return width;
+    }
+    
+    public float getHeight() {
+	return height;
+    }
+    
+    public Rectangle getHitBox() {
+	return hitBox;
+    }
+    
+    public boolean isAlive() {
+	return isAlive;
+    }
+    
+    public boolean isFacingRight() {
+	return facingRight;
+    }
 }

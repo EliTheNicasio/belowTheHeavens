@@ -8,7 +8,7 @@ public class Main {
 	LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
 	cfg.title = "belowTheHeavens";
 	cfg.width = 480;
-	cfg.height = 320;
+	cfg.height = 1136;
 		
 	new LwjglApplication(new BTHGame(), cfg);
 	}
