@@ -21,12 +21,12 @@ public class AssetLoader {
 	bluLftTexture = new Texture(Gdx.files.internal("data/bluLft.png"));
 	bluLftTexture.setFilter(TextureFilter.Linear, TextureFilter.Linear);
 	
-	bluLft = new TextureRegion(bluLftTexture, 0, 0, 1024, 2048);
+	bluLft = new TextureRegion(bluLftTexture, 0, 0, 1024, 1024);
 	
 	bluRtTexture = new Texture(Gdx.files.internal("data/bluRt.png"));
 	bluRtTexture.setFilter(TextureFilter.Linear, TextureFilter.Linear);
 	
-	bluRt = new TextureRegion(bluRtTexture, 0, 0, 1024, 2048);
+	bluRt = new TextureRegion(bluRtTexture, 0, 0, 1024, 1024);
 	
 	blu = new TextureRegion[] {bluLft, bluRt}; 
     }

@@ -18,7 +18,7 @@ public class GameWorld {
     public GameWorld(int midPointY) {
 	//currentState = GameState.MENU
 	this.midPointY = midPointY;
-	blu = new Blu(0, 1136, 96, 192, midPointY, 480);
+	blu = new Blu(200, 500, 96, 192, midPointY, 480, 1136);
 	//scroller = new ScrollHandler
     }
     
@@ -32,7 +32,7 @@ public class GameWorld {
 //		updateReady(delta);
 //		break;
 //	case RUNNING:
-//		updateRunning(delta);
+		updateRunning(delta);
 //		break;
 //	default:
 //		break;

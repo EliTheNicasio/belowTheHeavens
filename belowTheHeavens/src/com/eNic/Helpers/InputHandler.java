@@ -33,14 +33,8 @@ public class InputHandler implements InputProcessor{
     }
     
     @Override
-    public boolean touchUp(int screenX, int screenY, int pointer, int button) {
-	screenX = scaleX(screenX);
-	screenY = scaleY(screenY);
-	
-	//What happens on touchDown depending on gamestates goes here
-	blu.onClick();
-	
-	return true;
+    public boolean touchUp(int screenX, int screenY, int pointer, int button) {	
+	return false;
     }
     
     @Override

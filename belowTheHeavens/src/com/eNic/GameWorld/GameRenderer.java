@@ -70,11 +70,12 @@ public class GameRenderer {
     private void drawBlu(float runTime) {
 	Sprite bluSpr;
 	if(blu.isFacingRight()) {
-	    bluSpr = bluSprite[1];
-	} else {
 	    bluSpr = bluSprite[0];
+	} else {
+	    bluSpr = bluSprite[1];
 	}
-	batcher.draw(bluSpr, blu.getX(), blu.getY());
+	bluSpr.setPosition(blu.getX(), blu.getY());
+	bluSpr.draw(batcher);
     }
     
     public void render(float delta, float runTime) {
@@ -83,7 +84,8 @@ public class GameRenderer {
 	// Draw Background color
 //	if(runTime >= 1) {
 	    shapeRenderer.setColor(0 / 255.0f, 0 / 255.0f, 18 / 255.0f, 1);
-	    shapeRenderer.rect(0, 0, gameWidth, y += 50);
+//	    shapeRenderer.rect(0, 0, gameWidth, y += 50);
+	    shapeRenderer.rect(0, 0, gameWidth, gameHeight);
 //	}
 	
 	shapeRenderer.end();

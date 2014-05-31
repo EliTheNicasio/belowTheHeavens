@@ -11,20 +11,21 @@ public class Blu {
     
     private int width, height;
     private int midPointY;
-    private int screenWidth;
+    private int screenWidth, screenLength;
 
     private boolean isAlive, facingRight;
 
     private Rectangle hitBox;
     
     public Blu(float x, float y, int width, int height, int midPointY,
-	    int screenWidth) {
+	    int screenWidth, int screenLength) {
 	this.width = width;
 	this.height = height;
 	this.midPointY = midPointY;
 	this.screenWidth = screenWidth;
+	this.screenLength = screenLength;
 	position = new Vector2(x, y);
-	velocity = new Vector2(136, 0);
+	velocity = new Vector2(480, -1000);
 	acceleration = new Vector2(0, 0); //not sure if necessary
 	hitBox = new Rectangle();
 	isAlive = true;
@@ -41,9 +42,12 @@ public class Blu {
 	    position.x = 0;
 	    velocity.x *= -1;
 	}
-	if(position.x > screenWidth) {
-	    position.x = screenWidth;
+	if(position.x + width > screenWidth) {
+	    position.x = screenWidth - width;
 	    velocity.x *= -1;
+	}
+	if(position.y + height < 0) {
+	    position.y = screenLength - height;
 	}
 	
 	position.add(velocity.cpy().scl(delta));
