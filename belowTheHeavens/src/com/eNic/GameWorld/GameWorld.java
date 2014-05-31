@@ -2,24 +2,29 @@ package com.eNic.GameWorld;
 
 import com.badlogic.gdx.math.Rectangle;
 import com.eNic.GameObjects.Blu;
+import com.eNic.GameObjects.ScrollHandler;
 
 public class GameWorld {
     
     private Blu blu;
-    //private ScrollHandler scroller;
+    private ScrollHandler scroller;
     private Rectangle ground;
     private int score = 0;
     private float runTime = 0;
+    private int gameHeight, gameWidth;
     private int midPointY;
     private GameRenderer renderer;
     
     //GameStates go here
     
-    public GameWorld(int midPointY) {
+    public GameWorld(int midPointY, int gameWidth, int gameHeight) {
 	//currentState = GameState.MENU
 	this.midPointY = midPointY;
-	blu = new Blu(200, 500, 96, 192, midPointY, 480, 1136);
-	//scroller = new ScrollHandler
+	this.gameWidth = gameWidth;
+	this.gameHeight = gameHeight;
+	blu = new Blu(gameWidth / 2, gameHeight * .9f, gameWidth / 8,
+		gameWidth / 8, midPointY, gameWidth, gameHeight);
+	scroller = new ScrollHandler(this, 500);
     }
     
     public void update(float delta) {
@@ -49,6 +54,7 @@ public class GameWorld {
 	    delta = .15f;
 	}
 	blu.update(delta);
+	scroller.update(delta);
     }
     
     
@@ -64,6 +70,10 @@ public class GameWorld {
     
     public int getScore() {
 	return score;
+    }
+    
+    public ScrollHandler getScroller() {
+	return scroller;
     }
     
     public void addScore(int increment) {

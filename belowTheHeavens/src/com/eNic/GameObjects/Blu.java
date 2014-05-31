@@ -25,7 +25,7 @@ public class Blu {
 	this.screenWidth = screenWidth;
 	this.screenLength = screenLength;
 	position = new Vector2(x, y);
-	velocity = new Vector2(480, -1000);
+	velocity = new Vector2(500, 0);
 	acceleration = new Vector2(0, 0); //not sure if necessary
 	hitBox = new Rectangle();
 	isAlive = true;
