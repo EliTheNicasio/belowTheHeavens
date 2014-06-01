@@ -1,10 +1,12 @@
 package com.eNic.GameObjects;
 
+import com.eNic.GameObjects.Entities.Entity;
 import com.eNic.GameWorld.GameWorld;
 
 public class ScrollHandler {
 
     private Background bg1, bg2;
+    private Entity enemy;
     private int scrollSpeed;
     
     private GameWorld gameWorld;
@@ -15,7 +17,7 @@ public class ScrollHandler {
 	bg1 = new Background(0, 0, 480, 1136, 480, 1136, scrollSpeed);
 	bg2 = new Background(0, bg1.getTailY(), 480, 1136, 480,
 					1136, scrollSpeed);
-	
+	enemy = new Entity()
     }
     
     public void update(float delta) {

@@ -17,13 +17,13 @@ public class GameWorld {
     
     //GameStates go here
     
-    public GameWorld(int midPointY, int gameWidth, int gameHeight) {
+    public GameWorld( int gameWidth, int gameHeight) {
 	//currentState = GameState.MENU
 	this.midPointY = midPointY;
 	this.gameWidth = gameWidth;
 	this.gameHeight = gameHeight;
 	blu = new Blu(gameWidth / 2, gameHeight * .9f, gameWidth / 8,
-		gameWidth / 8, midPointY, gameWidth, gameHeight);
+		gameWidth / 8, gameWidth, gameHeight);
 	scroller = new ScrollHandler(this, 500);
     }
     

@@ -18,7 +18,7 @@ public class GameRenderer {
 
     private SpriteBatch batcher;
 
-    private int midPointY, gameWidth, gameHeight;
+    private int gameWidth, gameHeight;
     
     //Game Objects
     private Blu blu;
@@ -29,12 +29,10 @@ public class GameRenderer {
     private Sprite bg1Spr, bg2Spr;
     private Sprite[] bluSprite;
     
-    public GameRenderer(GameWorld world, int gameWidth, int gameHeight,
-	    int midPointY) {
+    public GameRenderer(GameWorld world, int gameWidth, int gameHeight) {
 	
 	myWorld = world;
 	
-	this.midPointY = midPointY;
 	this.gameWidth = gameWidth;
 	this.gameHeight = gameHeight;
 	cam = new OrthographicCamera();

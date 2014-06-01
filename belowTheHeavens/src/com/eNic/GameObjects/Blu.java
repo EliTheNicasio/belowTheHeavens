@@ -10,24 +10,22 @@ public class Blu {
     private Vector2 acceleration;
     
     private int width, height;
-    private int midPointY;
-    private int screenWidth, screenLength;
+    private int gameWidth, gameLength;
 
     private boolean isAlive, facingRight;
 
     private Rectangle hitBox;
     
-    public Blu(float x, float y, int width, int height, int midPointY,
-	    int screenWidth, int screenLength) {
+    public Blu(float x, float y, int width, int height, int screenWidth,
+	    int screenLength) {
 	this.width = width;
 	this.height = height;
-	this.midPointY = midPointY;
-	this.screenWidth = screenWidth;
-	this.screenLength = screenLength;
+	this.gameWidth = screenWidth;
+	this.gameLength = screenLength;
 	position = new Vector2(x, y);
 	velocity = new Vector2(500, 0);
 	acceleration = new Vector2(0, 0); //not sure if necessary
-	hitBox = new Rectangle();
+	hitBox = new Rectangle(x, y, width, height);
 	isAlive = true;
 	facingRight = true;
     }
@@ -42,17 +40,18 @@ public class Blu {
 	    position.x = 0;
 	    velocity.x *= -1;
 	}
-	if(position.x + width > screenWidth) {
-	    position.x = screenWidth - width;
+	if(position.x + width > gameWidth) {
+	    position.x = gameWidth - width;
 	    velocity.x *= -1;
 	}
 	if(position.y + height < 0) {
-	    position.y = screenLength - height;
+	    position.y = gameLength - height;
 	}
 	
 	position.add(velocity.cpy().scl(delta));
 	
-	//Setup boundingRec here
+	hitBox.set(position.x, position.y, width, height);// Might want to change width and height
+	// Hitbox may not be desired to be actual size of Blu
     }
     
     //Update GameStates

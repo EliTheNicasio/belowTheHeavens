@@ -7,6 +7,7 @@ public class Scrollable {
     protected Vector2 position;
     protected Vector2 velocity;
     protected Vector2 acceleration; //implement later
+    
     protected int width;
     protected int height;
     protected int gameWidth, gameHeight;
