@@ -17,7 +17,7 @@ public class ScrollHandler {
 	bg1 = new Background(0, 0, 480, 1136, 480, 1136, scrollSpeed);
 	bg2 = new Background(0, bg1.getTailY(), 480, 1136, 480,
 					1136, scrollSpeed);
-	enemy = new Entity()
+//	enemy = new Entity()
     }
     
     public void update(float delta) {
